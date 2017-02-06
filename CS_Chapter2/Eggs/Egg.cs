@@ -14,20 +14,13 @@ namespace Eggs
             int eggsThree = 53;
             int eggsFour = 25;
 
-            int dozen = eggs / 12;
-            int dozenTwo = eggsTwo / 12;
-            int dozenThree = eggsThree / 12;
-            int dozenFour = eggsFour / 12;
+            int totalEggs = eggs + eggsTwo + eggsThree + eggsFour;
 
-            int remainder = eggs % 12;
-            int remainderTwo = eggsTwo % 12;
-            int remainderThree = eggsThree % 12;
-            int remainderFour = eggsFour % 12;
+            int dozen = totalEggs / 12;
 
-            Console.WriteLine("A total of " + eggs + " eggs is " + dozen + " dozen and " + remainder + " eggs.");
-            Console.WriteLine("A total of " + eggsTwo + " eggs is " + dozenTwo + " dozen and " + remainderTwo + " eggs.");
-            Console.WriteLine("A total of " + eggsThree + " eggs is " + dozenThree + " dozen and " + remainderThree + " eggs.");
-            Console.WriteLine("A total of " + eggsFour + " eggs is " + dozenFour + " dozen and " + remainderFour + " eggs.");
+            int remainder = totalEggs % 12;
+
+            Console.WriteLine("A total of " + totalEggs + " eggs is " + dozen + " dozen and " + remainder + " eggs.");
         }
     }
 }
